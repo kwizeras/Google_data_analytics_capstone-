@@ -162,6 +162,8 @@ cyclistic_data_Geo_clean <- cyclistic_data_Geo_clean1 %>%
 
 <p style="text-align: left;">Although the pricing flexibility helps the company attracts more customers, Moreno, Cyclistic’s  marketing director, believes that maximizing the number of annual members will be key to the company’s future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno sees a solid opportunity to convert casual riders into members.</p>
 
+<p style="text-align: left;">Moreno has set a clear goal for me: Design marketing strategies aimed at converting casual riders into annual members. To do this, however, we need to better understand How do annual members and casual riders use Cyclistic bikes differently, why casual riders would buy a membership, and how digital media could affect our marketing tactics. In this preliminary analysis, I will use Cyclistic’s historical bike trip data to answer the first question.</p>
+
 
 # III. Data & Data Processing 
 
@@ -192,7 +194,7 @@ pie_chart <- plot_ly(
   values = ~percentage,
   type = "pie",
   hoverinfo = "text",
-  marker = list(colors = c("lightgreen", "yellow")) 
+  marker = list(colors = c("yellow", "lightgreen")) 
 ) %>%
 layout(
   title = list(
@@ -214,7 +216,7 @@ pie_chart
   <figcaption style="text-align: left; font-style: italic;">Figure 1: The majority of Cyclistic bike users are subscribers</figcaption>
 </figure>
 
-<p style="text-align: left;">Cyclistic 2019 dataset contains a total of 1,048,575 trips of which only 22.5% were taken by customers or casual as shown on figure1 on the left. The overall average ride length was 19.7 minutes, while customers and subscribers had an average of 41.5 and 13.4 minutes respectively. These statistics suggest that casual riders tend to take longer trips compared to their counterparts with annual membership with Cyclistic.</p>
+<p style="text-align: left;">Cyclistic 2019 dataset contains a total of 1,048,575 trips of which only 22.5% were taken by customers or casual as shown on figure 1 on the left. The overall average ride length was 19.7 minutes, while customers and subscribers had an average of 41.5 and 13.4 minutes respectively. These statistics suggest that casual riders tend to take longer trips compared to their counterparts with annual membership with Cyclistic.</p>
 
 
 
@@ -222,7 +224,7 @@ pie_chart
 
 <p style="text-align: left;">The cycling habits of Cyclistic bike users exhibit significant variations based on their membership status. Users can be broadly categorized into two groups: casual customers who do not have a membership, and subscribers who hold an annual membership.</p>
 
-<p style="text-align: left;">As depicted in the following figure, which represents the percentage of trips undertaken by customers and subscribers for each day of the week, a clear pattern emerges. Subscribers tend to take frequent trips throughout the day, every single day of the week, a behavior that is noticeably different from their non-member counterparts.</p>
+<p style="text-align: left;">As depicted in the following figure, figure 2, which represents the percentage of trips undertaken by customers and subscribers on each day of the week, a clear pattern emerges. Subscribers tend to take frequent trips throughout the day, every single day of the week, a behavior that is noticeably different from their non-member counterparts. For example, subscribers took 85.37% of all the rides that happened Wednesdays.</p>
 
 
 <figure style="overflow: auto; float: right; margin-left: 5px;">
@@ -273,7 +275,7 @@ data_graph
 
 <p style="text-align: left;">Another intriguing observation from this graph is the distinct riding habits of customers and subscribers over the weekend and weekdays. Customers tend to ride more on Saturdays and Sundays, while subscribers are more active during the weekdays. This trend suggests that subscribers are more likely to use their bikes for commuting to work, while customers might be using the bikes more for leisure activities.</p>
 
-<p style="text-align: left;">The graph on the right, labeled as Figure 3, shifts the focus to another aspect of user behavior: the length of the ride. The data suggests that customers tend to embark on longer rides, averaging up to 40 minutes each day of the week. In contrast, subscribers typically opt for shorter trips, averaging around 15 minutes. This difference in ride duration further underscores the divergent usage patterns between customers and subscribers, possibly reflecting their distinct needs and motivations for using the Cyclistic bike service.</p>
+<p style="text-align: left;">The subsequent graph, at the bottom shifts the focus to another aspect of user behavior: the length of the ride. The data suggests that customers tend to embark on longer rides, averaging up to 40 minutes Throughtout the week. In contrast, subscribers typically opt for shorter trips, averaging around 15 minutes. This difference in ride duration further underscores the divergent usage patterns between customers and subscribers, possibly reflecting their distinct needs and motivations for using the Cyclistic bike service.</p>
 
 <figure style="overflow: auto; float: left; margin-right: 5px;">
 
@@ -326,7 +328,7 @@ data_graph
 
  
 
-<p style="text-align: left;">The following graph to the left builds up on the idea that subscriber use Cyclistic bikes to commute to work. It illustrates the trend in the number of rides taken by subscribers at three-hour intervals throughout the day. Coincidentally the subscribers see their peak in the number of rides during the regular rush hours 6 to 8 am and 6 to 8 pm. This observation lends further evidence to the hypothesis that subscribers primarily use Cyclistic bikes for commuting to and from work.</p>
+<p style="text-align: left;">The following graph, figure 4, builds up on the idea that subscriber use Cyclistic bikes to commute to work. It illustrates the trend in the number of rides taken by subscribers at three-hour intervals throughout the day. Coincidentally the subscribers see their peak in the number of rides during the regular rush hours 6 to 8 am and 6 to 8 pm. This observation lends further evidence to the hypothesis that subscribers primarily use Cyclistic bikes for commuting to and from work.</p>
 
 
 <figure style="overflow: auto; float: right; margin-left: 5px;">
@@ -464,13 +466,13 @@ day_times
 <p style="text-align: left;">Leveraging the available data for the starting and ending stations of each trip, I conducted an aggregate analysis to rank all the routes utilized by Cyclistic bike users. The results revealed the top five most frequented routes, which are as follows:
 </p>
 
-* 1st route: 1.	Lake Shore Dr & Monroe St to Streeter Dr & Grand Ave, with a total of 2872 trips.
+* 1st route: Lake Shore Dr & Monroe St to Streeter Dr & Grand Ave, with a total of 2872 trips.
 * 2 nd route: A round trip from Lake Shore Dr & Monroe St back to the same location, with 2720 trips.
 * 3rd route: A round trip from Streeter Dr & Grand Ave back to the same location, with 2452 trips.
 * 4th route: A round trip from Michigan Ave & Oak St back to the same location, with 1405 trips.
 * 5th route: A round trip from Montrose Harbor back to the same location, with 1106 trips.
 
-<p style="text-align: left;">The subsequent graph provides a distribution of these trips among customers and subscribers. Interestingly, these routes are predominantly used by customer riders, with over 94 percent of customers using the first route. 
+<p style="text-align: left;">Figure 5 provides a distribution of these trips among customers and subscribers. Interestingly, these most used routes are predominantly used by customer riders, with over 94 percent of customers using the first route. 
 
 <p style="text-align: left;"> This finding is particularly surprising and suggests that these routes may be popular for leisurely rides or tourist activities. In fact, Streeter Dr. & Grand Ave. is near a very popular pier in Chicago and a Museum, suggesting that people use the bikes for fun and to get to and between points of interest. Lake Shore Dr. & Monroe St. and Lake Shore Dr. & North Blvd. are also near Grant Park which is a great place to go bike riding. It also underscores the importance of understanding the different usage patterns of customers and subscribers, as this information can guide Cyclistic’s strategic planning, resource allocation, advatisement campains aimed at convering customers into subscribers. For instance, ensuring adequate bike availability on these popular routes could enhance the riding experience for customers and potentially convert them into annual subscribers.
 </p>
@@ -543,7 +545,7 @@ data_graph2
 <figcaption style="text-align: left; font-style: italic;"> Figure 5:Lake Shore Dr & Monroe St to Streeter Dr & Grand Ave <br> is the most used route</figcaption>
 </figure>
 
-<p style="text-align: left;">Further dissecting  the distribution of trip by riders' age (Figure 2) and gender (Figure 3), a substantial portion of customer riders falls within the 21 to 30-year-old bracket. Additionally, an overwhelming majority (97%) of riders who did not disclose their gender are categorized as customer riders. This demographic revelation underscores the importance of customizing services and incentives tailored specifically to this age group. Aligning Cyclistic's offerings more closely with the preferences and needs of this demographic holds immense value.</p>
+<p style="text-align: left;">Further dissecting  the distribution of trip by riders' age and gender (Figure 6), we discover that a substantial portion of customer riders falls within the 21 to 30-year-old bracket. Additionally, an overwhelming majority (97%) of riders who did not disclose their gender are categorized as customer riders. This demographic revelation underscores the importance of customizing services and incentives tailored specifically to this age group. Aligning Cyclistic's offerings more closely with the preferences and needs of this demographic holds immense value.</p>
 
 <figure style="overflow: auto; margin: 0 auto; display: block; margin-right: 5px;width: 700px; height: 700px;">
 
@@ -677,99 +679,6 @@ trip_count_by_gender <- ggplot(data3, aes(x = gender, y = percentage, fill = Use
 
 <figure style="overflow: auto; float: left; margin-right: 5px;">
 
-
-<!-- ```{r Trip count by age, fig.width=5, fig.height=4} -->
-
-<!-- `< 10 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 2014) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `11 to 20 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 2004 & Rider_Age < 2014) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `21 to 30 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 1994 & Rider_Age < 2004) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `31 to 40 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 1984 & Rider_Age < 1994) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `41 to 50 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 1974 & Rider_Age < 1984) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `51 to 60 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age >= 1964 & Rider_Age < 1974) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- `> 60 Y.O.` <- cyclistic_data_clean %>% -->
-<!--   select(Trip_id = `01 - Rental Details Rental ID`,`User Type`, "Rider_Age" =`05 - Member Details Member Birthday Year` ) %>% -->
-<!--   drop_na() %>%  -->
-<!--   filter(Rider_Age < 1964) %>%  -->
-<!-- count(`User Type`) %>%  -->
-<!--   mutate(percentage = round(n / sum(n) * 100, 2)) -->
-
-<!-- combined_results2 <- bind_rows( -->
-<!--   `< 10 Y.O.` %>% mutate(Rider_Age = "< 10 Y.O."), -->
-<!--   `11 to 20 Y.O.` %>% mutate(Rider_Age = "11 to 20 Y.O."), -->
-<!--   `21 to 30 Y.O.` %>% mutate(Rider_Age = "21 to 30 Y.O."), -->
-<!--   `31 to 40 Y.O.` %>% mutate(Rider_Age = "31 to 40 Y.O."), -->
-<!--   `41 to 50 Y.O.` %>% mutate(Rider_Age = "41 to 50 Y.O."), -->
-<!--   `51 to 60 Y.O.` %>% mutate(Rider_Age = "51 to 60 Y.O."), -->
-<!--   `> 60 Y.O.` %>% mutate(Rider_Age = "> 60 Y.O.") -->
-
-<!-- ) %>% -->
-<!--   arrange(`User Type`, desc(percentage)) -->
-
-<!-- # Set the order of Rider_Age as a factor -->
-<!-- combined_results2$Rider_Age <- factor(combined_results2$Rider_Age, -->
-<!--                                         levels = c("< 10 Y.O.", "11 to 20 Y.O.", "21 to 30 Y.O.", -->
-<!--                                                    "31 to 40 Y.O.", "41 to 50 Y.O.", "51 to 60 Y.O.", -->
-<!--                                                    "> 60 Y.O.")) -->
-
-<!-- # Plot with ordered Rider_Age -->
-
-<!-- combined_results3 <- read_excel("google_cap/combined_results3.xlsx") -->
-<!-- age_range <- ggplot(combined_results3, aes(x = Rider_Age, y = percentage, fill = `User Type`)) + -->
-<!--   geom_bar(position = "dodge", stat = "identity", aes(text = paste0("Age Range: ", Rider_Age,"\n","Percentage: ", percentage))) + -->
-<!--   labs(x = "Age Range", y = "Percentage of Trips", title = "Percentage of Trips by Age") + -->
-<!--   theme_classic() + -->
-<!--   scale_fill_viridis_d() + -->
-<!--   easy_y_axis_title_size(size = 15) + -->
-<!--   easy_x_axis_title_size(size = 15) + -->
-<!--   easy_plot_title_size(size = 16) + -->
-<!--   easy_center_title()+ -->
-<!--   theme(axis.text.x = element_text(angle = 45, hjust = 1)) -->
-
-<!-- ggplotly(age_range, tooltip = c("text")) -->
-
-
-<!-- ``` -->
-<!-- <figcaption style="text-align: left; font-style: italic;">Caption: Description of the graph goes here.</figcaption> -->
-<!-- </figure> -->
-
-
-
 ```{r maps}
 
 # Your initial operations on 'to_map'
@@ -816,52 +725,6 @@ ride_by_station <- tomapjoined_data %>%
 <p style="text-align: left;">This data also suggests the necessity for Cyclistic to reconsider the approach to collecting gender-related information from riders. This could involve expanding the available options or reassessing the inclusion of this variable entirely. Rethinking how gender information is gathered will contribute to a more inclusive and reflective understanding of their diverse rider base, facilitating more targeted and comprehensive service enhancements.</p>
 
 
-
-<!-- <figure style="overflow: auto; float: right; margin-left: 5px;"> -->
-
-<!-- ```{r trip count by Gender, echo=FALSE, fig.width=5, fig.height=4} -->
-<!-- # 2019 dataset -->
-
-
-<!-- trip_count <- cyclistic_data_clean %>% -->
-<!--   select( Trip_id = `01 - Rental Details Rental ID`, `User Type`, `Member Gender`, ) %>%  -->
-<!--   mutate(`Member Gender` = ifelse(is.na(`Member Gender`), "Unspecified", as.character(`Member Gender`))) %>% -->
-<!-- group_by(`Member Gender`)  %>%  -->
-<!--     count(`User Type`)  -->
-
-<!-- data3 <- data.frame( -->
-<!--    gender= c("Male","Male", "Female", "Female", "Unspecified", "Unspecified"),  -->
-<!--    User_Type = c("Customers", "Subscriber","Customers", "Subscriber", "Customers", "Subscriber"), -->
-
-
-
-<!--   percentage = c(6.5, 93.5, 12.9, 87.1, 97, 3)  # Values for variable Var2 -->
-<!-- ) -->
-
-
-<!-- trip_count_by_gender <- ggplot(data3, aes(x = gender, y = percentage, fill = User_Type)) + -->
-<!--   geom_bar(position = "dodge",stat = "identity",aes(text = paste0("Member Gender: ", gender,"\n","percentage: ", percentage))) +  # Create grouped theme_classic()+ -->
-
-<!--   labs(x = "Gender", y = "Percentage", title = "Percentage of Trips by Gender") + -->
-<!--   theme_classic()+ -->
-<!--   scale_fill_viridis_d()+ -->
-<!--   easy_y_axis_title_size(size = 12)+ -->
-<!--   easy_x_axis_title_size(size = 12)+ -->
-<!--   easy_plot_title_size(size = 13)+ -->
-<!--   easy_center_title() -->
-
-<!--  ggplotly(trip_count_by_gender, tooltip = c("text")) -->
-
-
-
-<!-- ``` -->
-<!-- <figcaption style="text-align: left; font-style: italic;">Caption: Description of the graph goes here. <br>Our finance analysts have concluded that annual </figcaption> -->
-<!-- </figure> -->
-
-
-
-
-
 <figure style="overflow: auto; float: left; margin-left: 5px;">
 ```{r bike_type preferences, echo=FALSE,  fig.width=5, fig.height=4 }
 
@@ -902,7 +765,7 @@ bike_type <- X202008_divvy_tripdata %>%
 </figure>
 
 
-<p style="text-align: left;">My last insight from Cyclistic’s data is that most customer riders prefer electric bikes while subscribers use prefer classic ones as shown in figure 5. This insight suggest that Cyclistic should increase the number of bikes a the station that are frequently visited by customer riders. </p> <br>
+<p style="text-align: left;">My last insight from Cyclistic’s data is that most customer riders prefer electric bikes while subscribers use prefer classic ones as shown in figure 7. This insight suggest that Cyclistic should increase the number of electric bikes a the station that are frequently visited by customer riders. </p> <br>
 
 
 
@@ -927,7 +790,7 @@ bike_type <- X202008_divvy_tripdata %>%
 
 # IX. Appendices
 
-<p style="text-align: left;">To see all Cyclistic bike stations on the map visit my [Tableau Public account ](https://github.com/kwizeras/Google_data_analytics_capstone-)</p>
+<p style="text-align: left;">To see all Cyclistic bike stations on the map visit my [Tableau Public account ](https://public.tableau.com/app/profile/sotaire.kwizera/viz/ChicagoCyclisticBikestations/ChicagoCyclisticBikeStations)</p>
 
 <p style="text-align: left;">Visit my [Github](https://github.com/kwizeras/Google_data_analytics_capstone-) for source code</p>
 
